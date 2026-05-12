@@ -14,7 +14,11 @@ classes = ["Fresh", "Early", "Moderate", "Spoiled"]
 
 @app.route("/", methods=["GET"])
 def home():
-    return "Pineapple Freshness Detection Backend Running"
+    return """
+<h1>Pineapple Freshness Detection Backend</h1>
+<p>Status: Running Successfully</p>
+<p>API Endpoint: /predict</p>
+"""
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -58,4 +62,6 @@ def predict():
     }
 
     return jsonify(result)
+
+if __name__ == "__main__":
     app.run(debug=True)
