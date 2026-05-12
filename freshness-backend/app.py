@@ -10,7 +10,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 classes = ["Fresh", "Early", "Moderate", "Spoiled"]
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
     return "Pineapple Freshness Detection Backend Running"
 
